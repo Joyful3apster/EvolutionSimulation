@@ -1,7 +1,7 @@
 """"This is the gui for filtering and querrying data from the organism_database"""
 import tkinter as tk
 from tkinter import ttk
-from tkinter import customtkinter
+import ttkthemes
 from ttkthemes import ThemedTk
 import pandas as pd
 from pandasql import sqldf
@@ -32,6 +32,8 @@ def main(db=func.read_csv()) -> None:
     #root = tk.Tk()
     root = ThemedTk(theme="arc")
     root.title("Evolution Simulation")
+    ctk.set_default_color_theme("green")
+    ctk.set_appearance_mode("System")
 
     #Define frame globally
     frame = ttk.Frame(root)
